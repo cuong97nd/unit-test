@@ -69,7 +69,7 @@ module.exports = function (sequelize) {
                                 title: data.Title || '',
                                 state: 1, // Mặc định là trạng thái mới
                                 priority: 2, // Mặc định là medium
-                                type: 1, // Mặc định là functional
+                                type: 0, // Mặc định là other
                                 automationStatus: 1, // Mặc định là manual
                                 description: data.Description || '',
                                 template: 0, // Mặc định là không phải template

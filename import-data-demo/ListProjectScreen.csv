@@ -1,0 +1,41 @@
+Title,Description,Preconditions,Expected result
+Kiểm tra hiển thị nút tạo dự án với quyền USER,Kiểm tra hiển thị nút "新しいプロジェクトを追加" khi đăng nhập với quyền USER,Đăng nhập bằng tài khoản có quyền USER,"Nút ""新しいプロジェクトを追加"" không được hiển thị trên giao diện"
+Tạo dự án mới,Kiểm tra chức năng tạo dự án mới với các thông tin hợp lệ,Đăng nhập bằng tài khoản có quyền ADMIN/MANAGER,"Dự án mới được tạo thành công, hiển thị trong danh sách dự án"
+Tạo dự án thiếu thông tin,Kiểm tra hệ thống khi người dùng tạo dự án thiếu các thông tin bắt buộc,Đăng nhập bằng tài khoản có quyền ADMIN/MANAGER,"Hiển thị thông báo lỗi yêu cầu nhập đầy đủ thông tin bắt buộc (tên dự án, ngày bắt đầu, trạng thái)"
+,,,
+
+Kiểm tra hiển thị nút cập nhật với quyền USER,Kiểm tra hiển thị nút cập nhật khi đăng nhập với quyền USER,Đăng nhập với quyền USER và tham gia ít nhất một dự án,Nút cập nhật không được hiển thị trên giao diện
+Cập nhật tên dự án,Kiểm tra chức năng cập nhật tên của một dự án hiện có,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Tên dự án được cập nhật thành công, hiển thị đúng tên mới trong danh sách"
+Cập nhật dự án thiếu thông tin,Kiểm tra hệ thống khi cập nhật dự án thiếu các thông tin bắt buộc,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Hiển thị thông báo lỗi yêu cầu nhập đầy đủ thông tin bắt buộc (tên dự án, ngày bắt đầu, trạng thái)"
+Cập nhật chi tiết dự án,Kiểm tra chức năng cập nhật thông tin chi tiết của dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Chi tiết dự án được cập nhật thành công, hiển thị đúng thông tin mới khi xem chi tiết"
+Cập nhật trạng thái dự án,Kiểm tra chức năng thay đổi trạng thái dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Trạng thái dự án được cập nhật thành công, hiển thị đúng trạng thái mới"
+Cập nhật tiến độ dự án,Kiểm tra khả năng thay đổi trường tiến độ (進捗状況) của dự án,Đăng nhập với bất kỳ quyền nào (ADMIN/MANAGER/USER),"Trường tiến độ không thể chỉnh sửa được, chỉ hiển thị để xem"
+,,,
+
+Kiểm tra hiển thị nút sao chép với quyền USER,Kiểm tra hiển thị nút sao chép khi đăng nhập với quyền USER,Đăng nhập với quyền USER và tham gia ít nhất một dự án,Nút sao chép không được hiển thị trên giao diện
+Sao chép dự án và nội dung,Kiểm tra chức năng sao chép toàn bộ nội dung của dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án có task/subtask và file đính kèm,"Dự án được sao chép thành công bao gồm:
+- Tất cả các task và subtask
+- Tất cả các file đính kèm
+- Hiển thị trong danh sách dự án"
+Sao chép dự án và thay đổi ngày,Kiểm tra chức năng sao chép dự án và điều chỉnh ngày bắt đầu của các task,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Dự án được sao chép thành công, các ngày bắt đầu của task được điều chỉnh theo ngày mới"
+,,,
+
+Kiểm tra hiển thị nút xóa với quyền USER,Kiểm tra hiển thị nút xóa khi đăng nhập với quyền USER,Đăng nhập với quyền USER và tham gia ít nhất một dự án,Nút xóa không được hiển thị trên giao diện
+Xóa dự án,Kiểm tra chức năng xóa dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Dự án được xóa thành công, không còn hiển thị trong danh sách dự án"
+Xác nhận xóa dự án,Kiểm tra hộp thoại xác nhận khi xóa dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án,"Hộp thoại xác nhận hiển thị với nội dung ""このプロジェクトを削除してもよろしいですか？"", có thể hủy hoặc xác nhận"
+,,,
+
+Tìm kiếm dự án,Kiểm tra chức năng tìm kiếm dự án theo tên,Đăng nhập và có nhiều dự án trong hệ thống,"Hiển thị đúng các dự án có tên chứa từ khóa tìm kiếm, không hiển thị các dự án không khớp"
+Lọc dự án theo trạng thái,Kiểm tra chức năng lọc dự án theo trạng thái,Đăng nhập và có nhiều dự án với các trạng thái khác nhau,"Hiển thị đúng các dự án có trạng thái được chọn, không hiển thị các dự án có trạng thái khác"
+,,,
+
+Phân trang danh sách dự án,Kiểm tra chức năng phân trang khi có nhiều dự án,Đăng nhập và có trên 10 dự án trong hệ thống,"Danh sách hiển thị đúng 10 dự án trên mỗi trang, nút phân trang hoạt động chính xác"
+Hiển thị tiến độ dự án,Kiểm tra tính chính xác của tiến độ dự án được hiển thị,Đăng nhập và có ít nhất một dự án với các task đã hoàn thành một phần,"Tiến độ hiển thị đúng theo tỷ lệ hoàn thành của các task (ví dụ: 52%), thanh tiến độ hiển thị chính xác"
+Thay đổi vị trí hiển thị của dự án,Kiểm tra chức năng kéo thả để thay đổi vị trí của dự án trong danh sách,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất hai dự án,"Vị trí của dự án được thay đổi thành công, hiển thị theo thứ tự mới"
+,,,
+
+Thêm người tham gia vào dự án,Kiểm tra chức năng thêm người dùng vào dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án và một người dùng khác trong hệ thống,"Người dùng được thêm thành công vào dự án, hiển thị trong danh sách người tham gia"
+Gán vai trò USER cho người tham gia,Kiểm tra chức năng gán vai trò USER cho người tham gia dự án,Đăng nhập với quyền ADMIN/MANAGER và có ít nhất một dự án và một người tham gia,"Vai trò USER được gán thành công, hiển thị đúng trong danh sách người tham gia"
+,,,
+
+Xem dự án với quyền USER,Kiểm tra khả năng xem dự án khi đăng nhập với quyền USER,Đăng nhập với quyền USER và tham gia ít nhất một dự án,"Chỉ hiển thị các dự án mà người dùng tham gia, không hiển thị các dự án khác"

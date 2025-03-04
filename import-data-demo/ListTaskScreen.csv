@@ -1,0 +1,67 @@
+Title,Description,Preconditions,Expected result
+Kiểm tra hiển thị danh sách công việc,Kiểm tra hiển thị danh sách công việc trong biểu đồ Gantt,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Danh sách công việc hiển thị đúng trong biểu đồ Gantt, bao gồm tên công việc, ngày bắt đầu, ngày kết thúc và tiến độ"
+Kiểm tra hiển thị khi không có công việc,Kiểm tra thông báo hiển thị khi dự án không có công việc nào,Đăng nhập và truy cập vào một dự án không có công việc nào,"Hiển thị thông báo ""タスクがありません。"" (Không có công việc nào)"
+,,,
+
+Kiểm tra quyền thêm công việc với vai trò USER,Kiểm tra hiển thị nút thêm công việc khi đăng nhập với vai trò USER không có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò USER,Nút thêm công việc không được hiển thị trên giao diện
+Kiểm tra quyền thêm công việc với vai trò USER ADMIN,Kiểm tra hiển thị nút thêm công việc khi đăng nhập với vai trò USER có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò ADMIN,Nút thêm công việc được hiển thị trên giao diện
+Kiểm tra quyền thêm công việc với vai trò ADMIN/MANAGER,Kiểm tra hiển thị nút thêm công việc khi đăng nhập với vai trò ADMIN/MANAGER,Đăng nhập với vai trò ADMIN/MANAGER và truy cập vào bất kỳ dự án nào,Nút thêm công việc được hiển thị trên giao diện
+,,,
+
+Kiểm tra quyền xóa công việc với vai trò USER,Kiểm tra hiển thị nút xóa công việc khi đăng nhập với vai trò USER không có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò USER,Nút xóa công việc không được hiển thị trên giao diện
+Kiểm tra quyền xóa công việc với vai trò USER ADMIN,Kiểm tra hiển thị nút xóa công việc khi đăng nhập với vai trò USER có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò ADMIN,Nút xóa công việc được hiển thị trên giao diện
+Kiểm tra quyền xóa công việc với vai trò ADMIN/MANAGER,Kiểm tra hiển thị nút xóa công việc khi đăng nhập với vai trò ADMIN/MANAGER,Đăng nhập với vai trò ADMIN/MANAGER và truy cập vào bất kỳ dự án nào,Nút xóa công việc được hiển thị trên giao diện
+,,,
+
+Kiểm tra quyền chỉnh sửa công việc với vai trò USER,Kiểm tra hiển thị nút chỉnh sửa công việc khi đăng nhập với vai trò USER không có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò USER,Nút chỉnh sửa công việc không được hiển thị trên giao diện
+Kiểm tra quyền chỉnh sửa công việc với vai trò USER ADMIN,Kiểm tra hiển thị nút chỉnh sửa công việc khi đăng nhập với vai trò USER có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò ADMIN,Nút chỉnh sửa công việc được hiển thị trên giao diện
+Kiểm tra quyền chỉnh sửa công việc với vai trò ADMIN/MANAGER,Kiểm tra hiển thị nút chỉnh sửa công việc khi đăng nhập với vai trò ADMIN/MANAGER,Đăng nhập với vai trò ADMIN/MANAGER và truy cập vào bất kỳ dự án nào,Nút chỉnh sửa công việc được hiển thị trên giao diện
+,,,
+
+Lọc công việc theo trạng thái,Kiểm tra chức năng lọc công việc theo trạng thái,Đăng nhập và truy cập vào một dự án có nhiều công việc với các trạng thái khác nhau,"Chỉ hiển thị các công việc có trạng thái được chọn, không hiển thị các công việc có trạng thái khác"
+Lọc công việc theo mức độ ưu tiên,Kiểm tra chức năng lọc công việc theo mức độ ưu tiên,Đăng nhập và truy cập vào một dự án có nhiều công việc với các mức độ ưu tiên khác nhau,"Chỉ hiển thị các công việc có mức độ ưu tiên được chọn, không hiển thị các công việc có mức độ ưu tiên khác"
+Lọc công việc theo người được giao,Kiểm tra chức năng lọc công việc theo người được giao,Đăng nhập và truy cập vào một dự án có nhiều công việc được giao cho các người dùng khác nhau,"Chỉ hiển thị các công việc được giao cho người dùng được chọn, không hiển thị các công việc được giao cho người dùng khác"
+Lọc công việc với nhiều điều kiện,Kiểm tra chức năng lọc công việc với nhiều điều kiện cùng lúc (trạng thái + ưu tiên + người được giao),Đăng nhập và truy cập vào một dự án có nhiều công việc,"Chỉ hiển thị các công việc thỏa mãn tất cả các điều kiện lọc, không hiển thị các công việc không thỏa mãn một trong các điều kiện"
+Xóa bộ lọc,Kiểm tra chức năng xóa bộ lọc đã áp dụng,Đăng nhập và truy cập vào một dự án có nhiều công việc và đã áp dụng bộ lọc,"Sau khi xóa bộ lọc, tất cả các công việc được hiển thị lại"
+,,,
+
+Thay đổi ngày bắt đầu công việc,Kiểm tra chức năng thay đổi ngày bắt đầu của công việc bằng cách kéo thả trong biểu đồ Gantt,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Ngày bắt đầu của công việc được cập nhật thành công, hiển thị đúng vị trí mới trên biểu đồ Gantt và thông báo ""タスクが更新されました"" (Công việc đã được cập nhật)"
+Thay đổi ngày kết thúc công việc,Kiểm tra chức năng thay đổi ngày kết thúc của công việc bằng cách kéo thả trong biểu đồ Gantt,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Ngày kết thúc của công việc được cập nhật thành công, hiển thị đúng vị trí mới trên biểu đồ Gantt và thông báo ""タスクが更新されました"" (Công việc đã được cập nhật)"
+Thay đổi tiến độ công việc,Kiểm tra chức năng thay đổi tiến độ của công việc bằng cách kéo thanh tiến độ,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Tiến độ của công việc được cập nhật thành công, hiển thị đúng giá trị mới và thông báo ""タスクが更新されました"" (Công việc đã được cập nhật)"
+,,,
+
+Xóa công việc,Kiểm tra chức năng xóa công việc,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Hiển thị hộp thoại xác nhận với nội dung ""本当にこのタスクを削除してもよろしいですか？"" (Bạn có chắc chắn muốn xóa công việc này không?), sau khi xác nhận, công việc được xóa thành công và thông báo ""タスクが削除されました。"" (Công việc đã được xóa)"
+Hủy xóa công việc,Kiểm tra chức năng hủy xóa công việc,Đăng nhập và truy cập vào một dự án có ít nhất một công việc và nhấn nút xóa,"Sau khi nhấn nút ""キャンセル"" (Hủy) trong hộp thoại xác nhận, công việc không bị xóa và vẫn hiển thị trong danh sách"
+,,,
+
+Mở modal chi tiết công việc,Kiểm tra chức năng mở modal chi tiết công việc bằng cách nhấp đúp vào công việc,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Modal chi tiết công việc được mở, hiển thị đầy đủ thông tin của công việc được chọn"
+Đóng modal chi tiết công việc,Kiểm tra chức năng đóng modal chi tiết công việc,Đăng nhập và truy cập vào một dự án có ít nhất một công việc và đã mở modal chi tiết công việc,"Sau khi nhấn nút đóng, modal chi tiết công việc được đóng và quay lại màn hình danh sách công việc"
+,,,
+
+Mở rộng/thu gọn công việc cha,Kiểm tra chức năng mở rộng/thu gọn công việc cha để hiển thị/ẩn các công việc con,Đăng nhập và truy cập vào một dự án có cấu trúc công việc cha-con,"Khi nhấn vào biểu tượng mở rộng/thu gọn, các công việc con được hiển thị/ẩn tương ứng"
+Thay đổi vị trí công việc,Kiểm tra chức năng thay đổi vị trí của công việc trong danh sách bằng cách kéo thả,Đăng nhập và truy cập vào một dự án có ít nhất hai công việc,"Vị trí của công việc được thay đổi thành công, hiển thị theo thứ tự mới và thông báo ""タスクの位置が正常に更新されました。"" (Vị trí công việc đã được cập nhật thành công)"
+Thay đổi vị trí thất bại,Kiểm tra xử lý lỗi khi thay đổi vị trí công việc thất bại,Đăng nhập và truy cập vào một dự án có ít nhất hai công việc (giả lập lỗi khi cập nhật vị trí),"Hiển thị thông báo lỗi ""タスクの並び替えに失敗しました。"" (Sắp xếp lại công việc thất bại) và khôi phục lại vị trí ban đầu của các công việc"
+,,,
+
+Cập nhật tự động công việc cha,Kiểm tra cập nhật tự động thông tin công việc cha khi thay đổi công việc con,Đăng nhập và truy cập vào một dự án có cấu trúc công việc cha-con,"Khi thay đổi ngày bắt đầu, ngày kết thúc hoặc tiến độ của công việc con, thông tin tương ứng của công việc cha được cập nhật tự động"
+Điều chỉnh kích thước bảng công việc,Kiểm tra chức năng điều chỉnh kích thước giữa bảng danh sách công việc và biểu đồ Gantt,Đăng nhập và truy cập vào một dự án có ít nhất một công việc,"Có thể kéo thanh điều chỉnh kích thước để thay đổi tỷ lệ hiển thị giữa bảng danh sách công việc và biểu đồ Gantt"
+,,,
+
+Kiểm tra quyền truy cập với người dùng không tham gia dự án,Kiểm tra quyền truy cập vào danh sách công việc của dự án khi người dùng không phải là thành viên của dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng không tham gia,"Hiển thị thông báo lỗi ""このプロジェクトに参加していません。"" (Bạn không tham gia vào dự án này) và không hiển thị danh sách công việc"
+Kiểm tra quyền truy cập với vai trò ADMIN/MANAGER,Kiểm tra quyền truy cập vào danh sách công việc của dự án khi đăng nhập với vai trò ADMIN/MANAGER,Đăng nhập với vai trò ADMIN/MANAGER và truy cập vào bất kỳ dự án nào,"Hiển thị đầy đủ danh sách công việc của dự án, bao gồm cả các dự án mà người dùng không tham gia"
+,,,
+
+Tải lên tệp đính kèm khi tạo công việc mới,Kiểm tra chức năng tải lên tệp đính kèm khi tạo công việc mới,Đăng nhập với quyền thích hợp và truy cập vào một dự án,"Có thể chọn và tải lên tệp đính kèm, tệp được lưu trữ thành công và hiển thị trong danh sách tệp đính kèm của công việc sau khi tạo"
+Tải lên nhiều tệp đính kèm khi tạo công việc mới,Kiểm tra chức năng tải lên nhiều tệp đính kèm cùng lúc khi tạo công việc mới,Đăng nhập với quyền thích hợp và truy cập vào một dự án,"Có thể chọn và tải lên nhiều tệp đính kèm cùng lúc, tất cả các tệp được lưu trữ thành công và hiển thị trong danh sách tệp đính kèm của công việc sau khi tạo"
+Tải lên tệp đính kèm với định dạng không hợp lệ khi tạo công việc mới,Kiểm tra xử lý lỗi khi tải lên tệp đính kèm có định dạng không được hỗ trợ khi tạo công việc mới,Đăng nhập với quyền thích hợp và truy cập vào một dự án,"Hiển thị thông báo lỗi về định dạng tệp không hợp lệ, tệp không được tải lên"
+,,,
+
+Tải lên tệp đính kèm khi chỉnh sửa công việc,Kiểm tra chức năng tải lên tệp đính kèm khi chỉnh sửa công việc hiện có,Đăng nhập với quyền thích hợp và truy cập vào một dự án có ít nhất một công việc,"Có thể chọn và tải lên tệp đính kèm, tệp được lưu trữ thành công và hiển thị trong danh sách tệp đính kèm của công việc sau khi cập nhật"
+Tải lên nhiều tệp đính kèm khi chỉnh sửa công việc,Kiểm tra chức năng tải lên nhiều tệp đính kèm cùng lúc khi chỉnh sửa công việc hiện có,Đăng nhập với quyền thích hợp và truy cập vào một dự án có ít nhất một công việc,"Có thể chọn và tải lên nhiều tệp đính kèm cùng lúc, tất cả các tệp được lưu trữ thành công và hiển thị trong danh sách tệp đính kèm của công việc sau khi cập nhật"
+Xóa tệp đính kèm khi chỉnh sửa công việc,Kiểm tra chức năng xóa tệp đính kèm khi chỉnh sửa công việc hiện có,Đăng nhập với quyền thích hợp và truy cập vào một dự án có ít nhất một công việc có tệp đính kèm,"Có thể xóa tệp đính kèm, tệp bị xóa khỏi danh sách tệp đính kèm của công việc sau khi cập nhật"
+Tải xuống tệp đính kèm,Kiểm tra chức năng tải xuống tệp đính kèm của công việc,Đăng nhập và truy cập vào một dự án có ít nhất một công việc có tệp đính kèm,"Có thể tải xuống tệp đính kèm, tệp được tải xuống thành công và có thể mở được"
+,,,
+
+Kiểm tra quyền tải lên tệp đính kèm với vai trò USER,Kiểm tra quyền tải lên tệp đính kèm khi đăng nhập với vai trò USER không có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò USER,Có thể tải lên tệp đính kèm khi tạo hoặc chỉnh sửa công việc
+Kiểm tra quyền tải lên tệp đính kèm với vai trò USER ADMIN,Kiểm tra quyền tải lên tệp đính kèm khi đăng nhập với vai trò USER có quyền ADMIN trong dự án,Đăng nhập với vai trò USER và truy cập vào một dự án mà người dùng tham gia với vai trò ADMIN,Có thể tải lên tệp đính kèm khi tạo hoặc chỉnh sửa công việc
+Kiểm tra quyền tải lên tệp đính kèm với vai trò ADMIN/MANAGER,Kiểm tra quyền tải lên tệp đính kèm khi đăng nhập với vai trò ADMIN/MANAGER,Đăng nhập với vai trò ADMIN/MANAGER và truy cập vào bất kỳ dự án nào,Có thể tải lên tệp đính kèm khi tạo hoặc chỉnh sửa công việc

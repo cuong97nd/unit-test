@@ -28,5 +28,8 @@ module.exports = function (sequelize) {
     }
   });
 
+  const importRouter = require('./import')(sequelize);
+  router.use('/', importRouter);
+
   return router;
 };

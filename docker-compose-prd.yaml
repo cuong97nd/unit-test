@@ -5,33 +5,24 @@ services:
     image: unittcms-backend:latest
     build:
       context: ./backend
-      dockerfile: Dockerfile.dev
     ports:
-      - "7001:7001"
+      - '7001:7001'
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - FRONTEND_ORIGIN=https://7000--main--cuong--cuong-admin.coder1.hirogo-dev.com
       - PORT=7001
     volumes:
-      - ./backend:/app
-      - /app/node_modules
       - ./db-data:/app/database
-    command: npm run dev
 
   frontend:
     image: unittcms-frontend:latest
     build:
       context: ./frontend
-      dockerfile: Dockerfile.dev
     ports:
-      - "7000:7000"
+      - '7000:7000'
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - NEXT_PUBLIC_BACKEND_ORIGIN=https://7001--main--cuong--cuong-admin.coder1.hirogo-dev.com
       - PORT=7000
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    command: npm run dev
     depends_on:
       - backend
